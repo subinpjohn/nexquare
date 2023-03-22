@@ -1,4 +1,4 @@
-package in.qa.base;
+package io.qa.base;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,7 +26,7 @@ public class BaseTest {
 	public BaseTest()
 	{
 		properties = new Properties();
-		File file = new File(System.getProperty("user.dir")+"/src/main/java/in/qa/config/config.properties");
+		File file = new File(System.getProperty("user.dir")+"/src/main/java/io/qa/config/config.properties");
 
 		try {
 			FileInputStream inputStream = new FileInputStream(file);

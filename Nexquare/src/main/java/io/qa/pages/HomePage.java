@@ -1,13 +1,13 @@
-package in.qa.pages;
+package io.qa.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import in.qa.base.BaseTest;
-import in.qa.utils.PageUtils;
-import in.qa.utils.WaitUtility;
+import io.qa.base.BaseTest;
+import io.qa.utils.PageUtils;
+import io.qa.utils.WaitUtility;
 
 public class HomePage extends BaseTest {
 

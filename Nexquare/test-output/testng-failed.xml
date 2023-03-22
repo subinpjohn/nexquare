@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="in.qa.testcases.TestCase">
+      <class name="io.qa.testcases.TestCase">
         <methods>
           <include name="intilization"/>
-          <include name="searchProdcut"/>
+          <include name="addStaff"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- in.qa.testcases.TestCase -->
+      </class> <!-- io.qa.testcases.TestCase -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

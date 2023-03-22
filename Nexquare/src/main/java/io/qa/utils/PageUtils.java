@@ -1,11 +1,11 @@
-package in.qa.utils;
+package io.qa.utils;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import in.qa.base.BaseTest;
+import io.qa.base.BaseTest;
 
 public class PageUtils extends BaseTest{
 
@@ -49,6 +49,11 @@ public class PageUtils extends BaseTest{
 	}
 
 
+	public static boolean isDisplayed(WebDriver driver,WebElement ele)
+	{
+		WaitUtility.waitForElementToBeClickable(driver,ele);	
+		return PageUtils.isDisplayed(driver, ele);
+	}
 
 
 }

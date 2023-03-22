@@ -1,4 +1,4 @@
-package in.qa.utils;
+package io.qa.utils;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;

@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="in.qa.testcases.TestCase" class="method navigator-link" hash-for-method="searchProdcut">searchProdcut</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="io.qa.testcases.TestCase" class="method navigator-link" hash-for-method="addStaff">addStaff</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -121,21 +121,21 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">in.qa.testcases.TestCase</span>
+              <span class="class-name">io.qa.testcases.TestCase</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="searchProdcut">
-                  </a> <!-- searchProdcut -->
-                  <span class="method-name">searchProdcut</span>
-                  <div class="stack-trace">java.lang.NumberFormatException: For input string: &quot;02-07-1995&quot;
+                  <a name="addStaff">
+                  </a> <!-- addStaff -->
+                  <span class="method-name">addStaff</span>
+                  <div class="stack-trace">java.lang.NumberFormatException: For input string: &quot;Subin&quot;
 	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
 	at java.base/java.lang.Integer.parseInt(Integer.java:668)
 	at java.base/java.lang.Integer.parseInt(Integer.java:786)
-	at in.qa.utils.Calendar.selectDate(Calendar.java:22)
-	at in.qa.pages.PersonalDetails.addStaffWithMandatoryFields(PersonalDetails.java:54)
-	at in.qa.testcases.TestCase.searchProdcut(TestCase.java:35)
+	at io.qa.utils.Calendar.selectDate(Calendar.java:17)
+	at io.qa.pages.PersonalDetails.addStaffWithMandatoryFields(PersonalDetails.java:59)
+	at io.qa.testcases.TestCase.addStaff(TestCase.java:48)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 27 stack frames
 </div> <!-- stack-trace -->
@@ -146,7 +146,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/subinpjohn/eclipse-workspace/Nexquare/testng.xml</span>
+            <span class="header-content">/Users/subinpjohn/Desktop/Prj/nexquare/Nexquare/testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -155,7 +155,7 @@
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;in.qa.testcases.TestCase&quot;/&gt;
+      &lt;class name=&quot;io.qa.testcases.TestCase&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -197,14 +197,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'searchProdcut')
-data.setCell(0, 2, 'in.qa.testcases.TestCase')
-data.setCell(0, 3, 30787);
+data.setCell(0, 1, 'addStaff')
+data.setCell(0, 2, 'io.qa.testcases.TestCase')
+data.setCell(0, 3, 33515);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 30 seconds</span>
+              <span class="suite-total-time">Total running time: 33 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -230,20 +230,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">in.qa.testcases.TestCase</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">io.qa.testcases.TestCase</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">intilization</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">15148 ms</span>
+                <span class="method-start">15014 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">searchProdcut</span>
-                <span class="method-start">22979 ms</span>
+                <span class="method-name">addStaff</span>
+                <span class="method-start">23935 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

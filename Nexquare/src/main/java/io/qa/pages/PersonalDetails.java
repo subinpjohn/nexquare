@@ -1,14 +1,16 @@
-package in.qa.pages;
+package io.qa.pages;
+
+import java.security.PublicKey;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import in.qa.base.BaseTest;
-import in.qa.utils.Calendar;
-import in.qa.utils.PageUtils;
-import in.qa.utils.WaitUtility;
+import io.qa.base.BaseTest;
+import io.qa.utils.Calendar;
+import io.qa.utils.PageUtils;
+import io.qa.utils.WaitUtility;
 
 public class PersonalDetails extends BaseTest {
 	
@@ -43,9 +45,12 @@ public class PersonalDetails extends BaseTest {
 	@FindBy(id="submitButton") 
 	WebElement submitButton;
 	
+	@FindBy(xpath="//h2[text()='Staff Health Details']") 
+	WebElement satffHealthDetails;
+	
 	//-----------------------------
 	
-    public void addStaffWithMandatoryFields(String fullName,String dob,String jDate,String email,String salStartDate)
+    public void addStaffWithMandatoryFields(String fullName,String dob,String jDate,String email,String salStartDate) throws InterruptedException
     {  
     	PageUtils.sendInput(driver, staffFullName, fullName);
     	PageUtils.clickele(driver,userTypeDrp);
@@ -54,13 +59,15 @@ public class PersonalDetails extends BaseTest {
     	Calendar.selectDate(driver, dob);
     	PageUtils.clickele(driver, joinDate);
     	Calendar.selectDate(driver, jDate);
-    	PageUtils.sendInput(driver, joinDate, jDate);
     	PageUtils.sendInput(driver, pEmail, email);
     	PageUtils.clickele(driver, salaryStartDate);
     	Calendar.selectDate(driver, salStartDate);
     	PageUtils.clickele(driver,submitButton);
     }
     
-  
+  public boolean satffHealthDetails()
+  {
+	 return PageUtils.isDisplayed(driver, satffHealthDetails);
+  }
 
 }

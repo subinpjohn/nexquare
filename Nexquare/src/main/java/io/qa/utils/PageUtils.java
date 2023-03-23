@@ -51,7 +51,7 @@ public class PageUtils extends BaseTest{
 
 	public static boolean isDisplayed(WebDriver driver,WebElement ele)
 	{
-		WaitUtility.waitForElementToBeClickable(driver,ele);	
+		//WaitUtility.waitForEle(driver,ele);	
 		return PageUtils.isDisplayed(driver, ele);
 	}
 

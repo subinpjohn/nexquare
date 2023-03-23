@@ -5,9 +5,12 @@
     <classes>
       <class name="io.qa.testcases.TestCase">
         <methods>
+          <include name="quit"/>
+          <include name="addStaffTestWithoutMandatoryDetails"/>
           <include name="intilization"/>
-          <include name="addStaff"/>
-          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+          <include name="feeCollection"/>
+          <include name="addStaffTestWithMandaoryDetails"/>
         </methods>
       </class> <!-- io.qa.testcases.TestCase -->
     </classes>

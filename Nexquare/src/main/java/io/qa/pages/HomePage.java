@@ -24,10 +24,22 @@ public class HomePage extends BaseTest {
 	@FindBy(id="link_addStaff") 
 	WebElement addStaff;
 	
+	@FindBy(id="wallet_config active") 
+	WebElement feeConfiguration ;
+
+	//--------------------------------------------------
+	
     public void clickOnAddStaff()
     {  
     	PageUtils.clickele(driver,staffProfileManagement);
     	PageUtils.clickele(driver,addStaff);
+    	
+    }
+    
+    public void clickOnFeeConfiguration() throws InterruptedException
+    {  
+    	Thread.sleep(5000);
+    	PageUtils.clickele(driver,feeConfiguration);
     	
     }
     

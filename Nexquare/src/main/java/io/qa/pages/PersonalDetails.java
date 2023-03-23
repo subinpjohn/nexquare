@@ -13,61 +13,74 @@ import io.qa.utils.PageUtils;
 import io.qa.utils.WaitUtility;
 
 public class PersonalDetails extends BaseTest {
-	
+
 	public PersonalDetails(WebDriver driver)
 	{
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
-	
-		
+
+
 	@FindBy(id="staffFullName") 
 	WebElement staffFullName;
-	
+
 	@FindBy(xpath="//label[text()='User Type']//following-sibling::div[@class='select-wrapper']") 
 	WebElement userTypeDrp;
-	
+
 	@FindBy(xpath="//span[text()='Employee Staff ']//parent::li") 
 	WebElement employeeStaff;
-	
+
 	@FindBy(id="dob") 
 	WebElement dobField;
-	
+
 	@FindBy(id="joinDate") 
 	WebElement joinDate;
-	
+
 	@FindBy(id="email") 
 	WebElement pEmail;
-	
+
 	@FindBy(id="salaryStartDate") 
 	WebElement salaryStartDate;
-	
+
 	@FindBy(id="submitButton") 
 	WebElement submitButton;
-	
+
 	@FindBy(xpath="//h2[text()='Staff Health Details']") 
 	WebElement satffHealthDetails;
-	
+
+	@FindBy(xpath="(//small[@data-fv-for='staffSalaryStartDate'])[1]") 
+	WebElement salaryDateErrorMessage;
+
+
 	//-----------------------------
-	
-    public void addStaffWithMandatoryFields(String fullName,String dob,String jDate,String email,String salStartDate) throws InterruptedException
-    {  
-    	PageUtils.sendInput(driver, staffFullName, fullName);
-    	PageUtils.clickele(driver,userTypeDrp);
-    	PageUtils.clickele(driver,employeeStaff);
-    	PageUtils.clickele(driver, dobField);
-    	Calendar.selectDate(driver, dob);
-    	PageUtils.clickele(driver, joinDate);
-    	Calendar.selectDate(driver, jDate);
-    	PageUtils.sendInput(driver, pEmail, email);
-    	PageUtils.clickele(driver, salaryStartDate);
-    	Calendar.selectDate(driver, salStartDate);
-    	PageUtils.clickele(driver,submitButton);
-    }
-    
-  public boolean satffHealthDetails()
-  {
-	 return PageUtils.isDisplayed(driver, satffHealthDetails);
-  }
+
+	public void addStaffWithMandatoryFields(String fullName,String dob,String jDate,String email,String salStartDate) throws InterruptedException
+	{  
+		PageUtils.sendInput(driver, staffFullName, fullName);
+		PageUtils.clickele(driver,userTypeDrp);
+		PageUtils.clickele(driver,employeeStaff);
+		PageUtils.clickele(driver, dobField);
+		Calendar.selectDate(driver, dob);
+		PageUtils.clickele(driver, joinDate);
+		Calendar.selectDate(driver, jDate);
+		PageUtils.sendInput(driver, pEmail, email);
+		PageUtils.clickele(driver, salaryStartDate);
+		if(!salStartDate.isEmpty())		
+		{
+		Calendar.selectDate(driver, salStartDate);
+		}
+		PageUtils.clickele(driver,submitButton);
+	}
+
+	public boolean satffHealthDetails() throws InterruptedException
+	{
+		Thread.sleep(4000);
+		return PageUtils.isDisplayed(driver, satffHealthDetails);
+	}
+
+	public String salErrorMessage()
+	{
+		return PageUtils.getText(salaryDateErrorMessage);
+	}
 
 }

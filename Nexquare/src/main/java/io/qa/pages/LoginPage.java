@@ -37,6 +37,7 @@ public class LoginPage extends BaseTest{
 		PageUtils.sendInput(driver, userName, username);
 		PageUtils.sendInput(driver, passwordField, password);
 	    PageUtils.clickele(driver,loginBtn);
+	    Thread.sleep(5000);
 	}
 
 
